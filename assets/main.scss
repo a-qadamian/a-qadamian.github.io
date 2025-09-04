@@ -1,0 +1,19 @@
+---
+# Only front matter so Jekyll processes this file
+---
+
+// import Minima’s default styles
+@import "minima";
+
+// your custom overrides go below
+.social-media-list { 
+  display:flex; 
+  gap:.75rem; 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+}
+.social-media-list a { text-decoration:none; }
+.social-media-list .grey { opacity:.85; }
+.social-media-list .grey:hover { opacity:1; }
+.footer-meta p { margin:.25rem 0; }

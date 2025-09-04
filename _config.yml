@@ -16,10 +16,11 @@ author:
   email: ""
 
 minima:
-  # Social links used by social.html
+  hide_site_feed_link: true        
   social_links:
     - title: "GitHub"
       url: "https://github.com/a-qadamian"
       icon: "github"
-      hide_site_feed_link: true
+
+
 

@@ -4,28 +4,32 @@
   <data class="u-url" value="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
-
     <div class="footer-col-wrapper">
       <div class="footer-col">
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
+        {% if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name %}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif %}
+            {% if site.author.email %}
+              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            {% endif %}
+          </ul>
+        {% endif %}
       </div>
-      <div class="footer-col">
-      </div>
+
+      <div class="footer-col"></div>
     </div>
 
     <div class="social-links">
-      {%- include social.html -%}
+      {% include social.html %}
     </div>
 
+    <div class="footer-meta" style="margin-top:1rem; font-size:0.95rem; opacity:0.8;">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name | default: site.title | escape }} — All rights reserved.</p>
+      {% if page.last_modified_at %}
+        <p>Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+      {% endif %}
+    </div>
   </div>
-
 </footer>
